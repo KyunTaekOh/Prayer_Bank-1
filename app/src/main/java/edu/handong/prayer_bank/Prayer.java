@@ -40,7 +40,7 @@ public class Prayer extends AppCompatActivity {
         secondTV = findViewById(R.id.secondTV);
         finishTV = findViewById(R.id.finishTV);
 
-        startBtn = findViewById(R.id.startBtn);
+        startBtn = findViewById(R.id.start_button);
 
         // 시작버튼 이벤트 1처리
         startBtn.setOnClickListener(new View.OnClickListener() {

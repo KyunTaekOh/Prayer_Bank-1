@@ -4,71 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Prayer">
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:id="@+id/timeCountSettingLV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_marginHorizontal="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/startBtn"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/start_button"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.733"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.111">
 
-        <EditText
-            android:id="@+id/hourET"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:hint="00"
-            android:gravity="center"
-            android:layout_height="wrap_content"
-            android:inputType="number"/>
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textSize="20dp"
-            android:text=":"
-            android:gravity="center"
-            app:layout_constraintBottom_toTopOf="@+id/startBtn"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <EditText
-            android:id="@+id/minuteET"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:hint="00"
-            android:gravity="center"
-            android:layout_height="wrap_content"
-            android:inputType="number"/>
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textSize="20dp"
-            android:text=":"
-            android:gravity="center"
-            app:layout_constraintBottom_toTopOf="@+id/startBtn"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <EditText
-            android:id="@+id/secondET"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:hint="00"
-            android:gravity="center"
-            android:layout_height="wrap_content"
-            android:inputType="number"/>
     </LinearLayout>
 
     <LinearLayout
@@ -78,7 +28,7 @@
         android:orientation="horizontal"
         android:visibility="gone"
         android:layout_marginHorizontal="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/startBtn"
+        app:layout_constraintBottom_toTopOf="@+id/start_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -137,28 +87,100 @@
             android:layout_height="wrap_content"/>
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/finishTV"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:textColor="@color/black"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/startBtn"
+    <ImageButton
+        android:id="@+id/prayButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Start"
-        android:layout_marginBottom="100dp"
+        android:adjustViewBounds="true"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/praybutton"
+        android:maxHeight="43dp"
+        android:scaleType="fitCenter"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976"
+        app:srcCompat="@drawable/img_1008"
+        tools:ignore="DuplicateSpeakableTextCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck,DuplicateClickableBoundsCheck" />
+
+    <ImageButton
+        android:id="@+id/homeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/homebutton"
+        android:maxHeight="43dp"
+        android:scaleType="fitCenter"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.068"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976"
+        app:srcCompat="@drawable/home"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck,DuplicateClickableBoundsCheck,DuplicateSpeakableTextCheck" />
+
+    <ImageButton
+        android:id="@+id/mypageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/mypagebutton"
+        android:maxHeight="43dp"
+        android:scaleType="fitCenter"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.925"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976"
+        app:srcCompat="@drawable/person_crop_circle"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck,DuplicateClickableBoundsCheck,DuplicateSpeakableTextCheck" />
+
+    <ImageButton
+        android:id="@+id/summaryButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/summarybutton"
+        android:maxHeight="43dp"
+        android:scaleType="fitCenter"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/mypageButton"
+        app:layout_constraintHorizontal_bias="0.531"
+        app:layout_constraintStart_toEndOf="@+id/prayButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.977"
+        app:srcCompat="@drawable/graph_square_fill"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck,DuplicateClickableBoundsCheck,DuplicateSpeakableTextCheck" />
+
+    <ImageButton
+        android:id="@+id/calendarButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/calendarbutton"
+        android:maxHeight="43dp"
+        android:scaleType="fitCenter"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/prayButton"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toEndOf="@+id/homeButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.977"
+        app:srcCompat="@drawable/event"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck,DuplicateClickableBoundsCheck,DuplicateSpeakableTextCheck" />
 
     <View
         android:id="@+id/divider7"
@@ -172,104 +194,161 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageButton
-        android:id="@+id/prayButton"
+    <Button
+        android:id="@+id/stop_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:background="#00FFFFFF"
-        android:maxHeight="43dp"
-        android:minHeight="45dp"
-        android:scaleType="fitCenter"
-        android:visibility="visible"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="41dp"
+        android:text="STOP"
+        app:layout_constraintBottom_toTopOf="@+id/divider2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.702"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout2"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/start_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="41dp"
+        android:text="START"
+        app:layout_constraintBottom_toTopOf="@+id/divider2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.297"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout2"
+        tools:ignore="TextContrastCheck" />
+
+
+    <TextView
+        android:id="@+id/finishTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976"
-        app:srcCompat="@drawable/img_1008"
-        tools:ignore="DuplicateSpeakableTextCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck"
-        android:contentDescription="@string/praybutton" />
+        app:layout_constraintVertical_bias="0.192" />
 
     <ImageButton
-        android:id="@+id/homeButton"
+        android:id="@+id/musicButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="600dp"
         android:adjustViewBounds="true"
         android:background="#00FFFFFF"
-        android:maxHeight="43dp"
-        android:minHeight="45dp"
+        android:contentDescription="@string/musicbutton"
+        android:maxHeight="50dp"
         android:scaleType="fitCenter"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/divider2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.068"
+        app:layout_constraintHorizontal_bias="0.955"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976"
-        app:srcCompat="@drawable/home"
-        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
-        android:contentDescription="@string/homebutton" />
+        app:srcCompat="@drawable/queue_music"
+        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
 
-    <ImageButton
-        android:id="@+id/mypageButton"
-        android:layout_width="wrap_content"
+    <TextView
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:background="#00FFFFFF"
-        android:maxHeight="43dp"
-        android:minHeight="45dp"
-        android:scaleType="fitCenter"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="132dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text=":"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/start_button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.925"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976"
-        app:srcCompat="@drawable/person_crop_circle"
-        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
-        android:contentDescription="@string/mypagebutton" />
+        app:layout_constraintVertical_bias="0.05" />
 
-    <ImageButton
-        android:id="@+id/summaryButton"
+    <EditText
+        android:id="@+id/secondET"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:hint="00"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="314dp"
+        tools:layout_editor_absoluteY="128dp" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="136dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text=":"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/start_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <EditText
+        android:id="@+id/minuteET"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:hint="00"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="173dp"
+        tools:layout_editor_absoluteY="128dp" />
+
+    <EditText
+        android:id="@+id/hourET"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:hint="00"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="128dp" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="317dp"
+        android:layout_height="366dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="80dp"
+        android:background="#C1C0C0"
+        app:layout_constraintBottom_toTopOf="@+id/divider2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time_view">
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/time_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:background="#00FFFFFF"
-        android:maxHeight="43dp"
-        android:minHeight="45dp"
-        android:scaleType="fitCenter"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/mypageButton"
-        app:layout_constraintHorizontal_bias="0.531"
-        app:layout_constraintStart_toEndOf="@+id/prayButton"
+        android:layout_marginTop="52dp"
+        android:layout_marginBottom="30dp"
+        android:text="00 : 00 : 00"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/divider2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.479"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.977"
-        app:srcCompat="@drawable/graph_square_fill"
-        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
-        android:contentDescription="@string/summarybutton" />
-
-
-    <ImageButton
-        android:id="@+id/calendarButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:background="#00FFFFFF"
-        android:maxHeight="43dp"
-        android:scaleType="fitCenter"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/prayButton"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toEndOf="@+id/homeButton"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.977"
-        app:srcCompat="@drawable/event"
-        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
-        android:contentDescription="@string/calendarbutton" />
+        app:layout_constraintVertical_bias="0.74" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
